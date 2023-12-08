@@ -1,0 +1,165 @@
+html{
+  margin:0;
+  background-color: #b8f0ff;
+}
+
+body {
+  background-color: #e3f3f7;
+  color: #333;
+  margin: 0;
+  font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+  font-family:monospace;
+  display: block;
+}
+h2{
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  font-weight: 2000;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.logo {
+  font-size: 200%;
+  padding: 50px 20px;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+nav {
+  background-color: #000;
+  padding: .5em;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature {
+  width: 200px;
+}
+
+/* my code */
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+.feature {
+  float: left;
+  margin: 0 15px 15px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 25px;
+}
+.welcome{
+  position: relative;  
+  background:  #b8f0ff;
+  top: 10px;
+  left: 10px;
+  z-index: 1; 
+  display:flex;
+  margin-top:2;
+  margin-bottom: 0;
+  margin-left: 2;
+  font-size: 2em;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1px;  
+  grid-auto-rows:minmax(100px, auto);
+  margin-top: 0.1%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.current{
+  color: antiquewhite;
+}
+.title {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.page{
+  font-family:monospace;
+  font-size: 2em;
+}
+.upload{
+  text-decoration: underline;
+}
+.end{
+  display: flex;
+  font-family:monospace;;
+  justify-content: center;
+}
+
+/*屏幕宽度小于800px,改变布局和样式*/
+@media screen and (max-width:800px) {
+  header {
+      padding: 10px 20px;
+      flex-direction: column;
+  }
+  .banner {
+      padding: 150px 20px 50px;
+      flex-direction: column-reverse;
+  }
+  .banner .image {
+      max-width: 80%;
+      margin-left: 0;
+  }
+  .banner .content h2 {
+      font-size: 2em;
+  }
+}
+/*屏幕宽度小于600px,改变布局和样式*/
+@media screen and (max-width:600px) {
+  header .search {
+      width: 100%;
+  }
+  .banner .image {
+      margin-top: 30px;
+  }
+}
+
+abbr,acronym,address,caption,cite,code,dfn,th,var {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
